@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+    - main
+jobs:
+  trigger-vulrep-scan:
+    runs-on: ubuntu-latest
+    name: Trigger a Vulrep scan
+    steps:
+      - name: Vulrep GitHub Action
+        uses: vulteria/vulrep-cli@v0.1.0
+        with:
+          project_code: 20nuZRTEOF
+          token: ${{ secrets.VULREP_TOKEN }}
+        
