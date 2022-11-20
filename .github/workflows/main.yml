@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Trigger a Vulrep scan
     steps:
+      - uses: actions/checkout@v3
       - name: Vulrep GitHub Action
-        uses: vulteria/vulrep-cli@v0.3.0
+        id: trigger-scan
+        uses: vulteria/vulrep-cli@v0.4.0
         with:
           project_code: 20nuZRTEOF
           token: ${{ secrets.VULREP_TOKEN }}
