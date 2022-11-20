@@ -8,9 +8,9 @@ jobs:
     name: Trigger a Vulrep scan
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       - name: Vulrep GitHub Action
-        uses: vulteria/vulrep-cli@v0.2.0
+        uses: vulteria/vulrep-cli@v0.3.0
         with:
           project_code: 20nuZRTEOF
           token: ${{ secrets.VULREP_TOKEN }}
