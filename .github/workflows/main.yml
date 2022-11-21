@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Vulrep GitHub Action
         id: trigger-scan
-        uses: vulteria/vulrep-cli@v0.4.0
+        uses: vulteria/vulrep-cli@v0.5.0
         with:
           project_code: 20nuZRTEOF
           token: ${{ secrets.VULREP_TOKEN }}
